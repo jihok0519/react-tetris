@@ -1,25 +1,28 @@
-import React from 'react';
+import React from "react";
 
-import { createStage } from '../gameHelpers';
+import { createStage } from "../gameHelpers";
 
-import Stage from './Stage';
-import Display from './Display';
-import StartButton from './StartButton';
+import Stage from "./Stage";
+import Display from "./Display";
+import StartButton from "./StartButton";
+import { StyledCell } from "./styles/StyledCell";
 
 const Tetris = () => {
-    return (
-    <div>
-        <Stage stage={createStage()} />
-        <aside>
-            <div>
-            <Display text="Score" />
-            <Display text="Rows" />
-            <Display text="Levels" />
-            </div>
-            <StartButton />
-        </aside>
-    </div>
-    );
+	return (
+		<StyledTetrisWrapper>
+			<StyledTetris>
+				<Stage stage={createStage()} />
+				<aside>
+					<div>
+						<Display text="Score" />
+						<Display text="Rows" />
+						<Display text="Levels" />
+					</div>
+					<StartButton />
+				</aside>
+			</StyledTetris>
+		</StyledTetrisWrapper>
+	);
 };
 
 export default Tetris;
