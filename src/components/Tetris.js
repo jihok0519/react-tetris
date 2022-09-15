@@ -1,11 +1,11 @@
 import React from "react";
 
 import { createStage } from "../gameHelpers";
+import { StyledTetris, StyledTetrisWrapper } from "./styles/StyledTetris";
 
 import Stage from "./Stage";
 import Display from "./Display";
 import StartButton from "./StartButton";
-import { StyledCell } from "./styles/StyledCell";
 
 const Tetris = () => {
 	return (
