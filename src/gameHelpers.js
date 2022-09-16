@@ -1,5 +1,3 @@
-import Stage from "./components/Stage";
-
 export const STAGE_WIDTH = 12;
 export const STAGE_HEIGHT = 20;
 
@@ -16,9 +14,9 @@ export const checkCollision = (player, stage, {x: moveX, y: moveY }) => {
                 if (
                 // 2. check that our moves are inside the game area's parameters(width & height).
                 !stage[y + player.pos.y + moveY] ||
-                !stage[y + player.pos.y + moveY][x + player.pos.x + moveX] ||
+                    !stage[y + player.pos.y + moveY][x + player.pos.x + moveX] ||
                 // 3. check that the cell we're moving to isn't clear.
-                stage[y + player.pos.y + moveY][x + player.pos.x + moveX][1] !== 'clear'
+                    stage[y + player.pos.y + moveY][x + player.pos.x + moveX][1] !== 'clear'
                 ) {
                 return true;
                 }
